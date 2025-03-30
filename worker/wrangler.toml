@@ -1,0 +1,9 @@
+name = "tecmo-matchup"
+main = "src/index.ts"
+compatibility_date = "2025-02-14"
+type = "webpack"  # or "javascript" if you're not using webpack
+
+workers_dev = true
+
+[site]
+bucket = "../frontend/.output/public"  # adjust path if needed; this points to your generated Nuxt files

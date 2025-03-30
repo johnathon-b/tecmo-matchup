@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.btn-retro {
+    @apply px-6 py-2 bg-primary rounded text-xl font-semibold;
+    box-shadow: 0 0 10px #fca311;
+  }
+  .btn-retro:hover {
+    @apply bg-yellow-500;
+    box-shadow: 0 0 20px #fca311;
+  }
+
+  .star-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* so you can still click through to your content */
+    z-index: -1;           /* ensure stars are behind other content if needed */
+  }
+  
+  .star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out;
+  }
+  
+  /* Random star positions */
+  .star:nth-child(1)  { top: 10%; left: 20%; }
+  .star:nth-child(2)  { top: 30%; left: 80%; }
+  .star:nth-child(3)  { top: 75%; left: 50%; }
+  .star:nth-child(4)  { top: 20%; left: 40%; }
+  .star:nth-child(5)  { top: 50%; left: 10%; }
+  .star:nth-child(6)  { top: 80%; left: 90%; }
+  .star:nth-child(7)  { top: 35%; left: 60%; }
+  .star:nth-child(8)  { top: 5%;  left: 70%; }
+  .star:nth-child(9)  { top: 90%; left: 30%; }
+  .star:nth-child(10) { top: 15%; left: 80%; }
+  .star:nth-child(11) { top: 65%; left: 15%; }
+  .star:nth-child(12) { top: 40%; left: 50%; }
+
+  
+  /* Twinkle keyframes */
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.8; transform: scale(1); }
+    50%      { opacity: 0.3; transform: scale(0.8); }
+  }
